@@ -22,7 +22,7 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pdfium.h">
+    <ClInclude Include="PdfiumDotNetWrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -30,7 +30,7 @@
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Pdfium.cpp">
+    <ClCompile Include="PdfiumDotNetWrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,64 +48,64 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\pdfium.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\bigint.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\pdfwindow.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_agg.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\bigint.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_freetype.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_agg.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_lcms2.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_freetype.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_libopenjpeg.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_lcms2.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_lpng.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_libopenjpeg.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\fx_zlib.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_lpng.lib">
+    <Library Include="External\Pdfium\Output\obj\third_party\jpeg.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\fx_zlib.lib">
+    <Library Include="External\Pdfium\Output\obj\fdrm.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\third_party\jpeg.lib">
+    <Library Include="External\Pdfium\Output\obj\formfiller.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fdrm.lib">
+    <Library Include="External\Pdfium\Output\obj\fpdfapi.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\formfiller.lib">
+    <Library Include="External\Pdfium\Output\obj\fpdfdoc.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fpdfapi.lib">
+    <Library Include="External\Pdfium\Output\obj\fpdftext.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fpdfdoc.lib">
+    <Library Include="External\Pdfium\Output\obj\fxcodec.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fpdftext.lib">
+    <Library Include="External\Pdfium\Output\obj\fxcrt.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fxcodec.lib">
+    <Library Include="External\Pdfium\Output\obj\fxedit.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fxcrt.lib">
+    <Library Include="External\Pdfium\Output\obj\fxge.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fxedit.lib">
+    <Library Include="External\Pdfium\Output\obj\javascript.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\fxge.lib">
+    <Library Include="External\Pdfium\Output\obj\pdfium.lib">
       <Filter>Static Libraries</Filter>
     </Library>
-    <Library Include="..\..\Pdfium\repo\pdfium\caner\obj\javascript.lib">
+    <Library Include="External\Pdfium\Output\obj\pdfwindow.lib">
       <Filter>Static Libraries</Filter>
     </Library>
   </ItemGroup>

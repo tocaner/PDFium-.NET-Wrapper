@@ -1,10 +1,7 @@
 // This is the main DLL file.
 
-#include <stdio.h>
-#include "Pdfium.h"
-#include "fpdf_save.h"
-#include "fpdf_edit.h"
-#include "fpdf_ppo.h"
+#include "PdfiumDotNetWrapper.h"
+#include <stdio.h> // for sprintf_s
 
 
 using namespace PdfiumDotNetWrapper;

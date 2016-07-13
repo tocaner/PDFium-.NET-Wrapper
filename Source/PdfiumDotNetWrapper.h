@@ -1,7 +1,7 @@
 // Pdfium.h
 
 #pragma once
-#include "fpdfview.h"
+#include "External\Pdfium\pdfium.h"
 
 
 using namespace System;

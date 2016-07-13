@@ -1,0 +1,66 @@
+Environment and Tools
+---------------------
+Install Visual Studio Community 2015
+Select: Programming Languages\Visual C++\Common Tools for Visual C++ 2015
+
+In Windows 10
+Install Windows Software Development Kit (SDK) for Windows 10
+https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk
+
+Install depot tools
+Follow instructions at: https://pdfium.googlesource.com/pdfium/
+
+
+Check-out PDFium repository
+---------------------------
+Open command window in ~\Source\External\Pdfium\Repo
+
+> set DEPOT_TOOLS_WIN_TOOLCHAIN=0
+> gclient sync
+
+
+Modifications on BUILD.gn files
+-------------------------------
+After sync is complete edit the following two files:
+
+1. ~\Source\External\Pdfium\Repo\pdfium\BUILD.gn
+
+- Add two more items at the pdfium library:
+
+  static_library("pdfium") { sources = [
+      ...
+      "../../Custom/pdfium_custom.cpp",
+      "../../Custom/pdfium_custom.h",
+      ]
+
+- Remove the following sections:
+
+  source_set("test_support")
+  test("pdfium_unittests")
+  test("pdfium_embeddertests")
+
+2. ~\Source\External\Pdfium\Repo\pdfium\third_party\BUILD.gn
+
+- Change 'source_set' to 'static_library', except for the last one 'pdfium_base'
+
+
+Building the Code
+-----------------
+Open command window in ~\Source\External\Pdfium\Repo
+
+> cd pdfium
+> set DEPOT_TOOLS_WIN_TOOLCHAIN=0
+> gn args ..\..\Output
+
+This will bring the editor window where we can edit the arguments
+
+  is_debug = false            # Set true for debug build
+  target_cpu = "x86"          # Platform "x86" or "x64" 
+  pdf_use_skia = false        # Keep false
+  pdf_enable_xfa = false      # Keep false
+  pdf_enable_v8 = false       # Keep false
+  pdf_is_standalone = false   # Keep false
+
+After closing the editor window, we are back to command window
+
+> ninja -C ..\..\Output

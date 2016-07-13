@@ -1,0 +1,25 @@
+# Possible configurations for windows:
+#
+# 32-bit Release
+#   is_debug = false
+#   target_cpu = "x86"
+#
+# 64-bit Release
+#   is_debug = false
+#   target_cpu = "x64"
+#
+# 32-bit Debug
+#   is_debug = true
+#   target_cpu = "x86"
+#
+# 64-bit Debug
+#   is_debug = true
+#   target_cpu = "x64"
+
+is_debug = false            # Set true for debug build
+target_cpu = "x86"          # Platform "x86" or "x64" 
+pdf_use_skia = false        # Keep false
+pdf_enable_xfa = false      # Keep false
+pdf_enable_v8 = false       # Keep false
+pdf_is_standalone = false   # Keep false
+
