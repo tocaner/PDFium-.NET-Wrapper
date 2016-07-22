@@ -1,3 +1,5 @@
 .vs
 .git
 /Output
+/Source/External/Pdfium/Output
+/Source/External/Pdfium/Repo

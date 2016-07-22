@@ -1,6 +1,20 @@
 // Pdfium.h
 
 #pragma once
+// The following define is necessary in order to target the framework v3.5
+// -----
+// Setting framework to v3.5 produces the following error:
+// LNK2022	metadata operation failed(80131195) : Custom attributes are not consistent
+// Changing the platform toolset from v140 (vs2015) to v120 (vs2013) removes this error. 
+// However then this brings another error instead:
+// LNK2038	mismatch detected for '_MSC_VER': value '1800' doesn't match value '1900' in pdfium.lib(fpdfview.obj)
+// Therefore we should not change the platform toolset. 
+// The LNK2022 is caused by the inclusion of <windows.h> in the unmanaged code (pdfium.h)
+// This define limits the system required in the unmanaged code to Windows Vista level.
+// https://msdn.microsoft.com/en-ca/library/windows/desktop/aa383745(v=vs.85).aspx
+// If the target framework changes to 4+ then both the define and this comment can be removed.
+// ------
+#define _WIN32_WINNT 0x0600
 #include "External\Pdfium\pdfium.h"
 
 

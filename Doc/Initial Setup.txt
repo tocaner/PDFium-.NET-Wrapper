@@ -1,21 +1,21 @@
 Create new project
-- New Project > Visual C++ > CLR > Class Library
+- New Project > Visual C++ > CLR > Class Library, also specify framework version here
 
 To move the ipch folder to %TEMP% folder:
 - Tools > Options > TextEditor > C/C++ > Advanced > Check: Always Use Fallback Location
 
 Speed improvement:
 - Tools > Options > Environment > C/C++ > Synchronized Settings > Uncheck: Synchronize settings accross devices when...
+- Tools > Options > Source Control > Plug-in Selection > Current source control plug-in: None
 
 Specify output folders 
 - Project > Properties > (All Configurations) > General > Output Directory = $(SolutionDir)Output\Bin\$(Configuration)\
 - Project > Properties > (All Configurations) > General > Intermediate Directory = $(SolutionDir)Output\Obj\$(Configuration)\
-- Project > Properties > (All Configurations) > C/C++ > General > Additional Include Directories = C:\00_PROJECTS_00\Pdfium\repo\pdfium\public
 - Project > Properties > (All Configurations) > C/C++ > Precompiled Headers > Precompiled Header = Not Using Precompiled Headers
 - Project > Properties > (All Configurations) > Linker > Input > Additional Dependencies = %(AdditionalDependencies)
 - Project > Properties > (All Configurations) > Linker > Input > Ignore All Default Libraries = No
 - Project > Properties > (All Configurations) > Linker > Input > Ignore Specific Default Libraries = libcmt
 
-Rename $(SolutionDir)\Pdfium folder to Source
-- Edit Pdfium.sln file
-- Change "Pdfium\Pdfium.vcxproj" to "Source\Pdfium.vcxproj"
+Rename $(SolutionDir)\PdfiumDotNetWrapper folder to Source
+- Edit PdfiumDotNetWrapper.sln file
+- Change "PdfiumDotNetWrapper\PdfiumDotNetWrapper.vcxproj" to "Source\PdfiumDotNetWrapper.vcxproj"
