@@ -202,7 +202,7 @@ bool Pdfium::CopyPage(IntPtr destDoc, IntPtr sourceDoc, int pageNumber, int inse
 
 void Pdfium::RenderPageToBitmap(IntPtr page, BitmapInfo *pInfo)
 {
-  FPDF_BITMAP handle = FPDFBitmap_CreateEx(pInfo->Width, pInfo->Height, (int)pInfo->PixelFormat, (void*)pInfo->Data, pInfo->Stride);
+  FPDF_BITMAP handle = FPDFBitmap_CreateEx2(pInfo->Width, pInfo->Height, (FPDFPixel)pInfo->PixelFormat, (void*)pInfo->Data, pInfo->Stride);
 
   try
   {
