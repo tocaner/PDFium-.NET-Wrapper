@@ -109,7 +109,7 @@ void Pdfium::AddBitmapToPage(IntPtr document, IntPtr page, BitmapInfo *pInfo, Tr
   FPDF_PAGEOBJECT imageObject = FPDFPageObj_NewImgeObj((FPDF_DOCUMENT)document);
 
   // Add the bitmap to an image object and add the image object to the output page.
-  FPDF_BITMAP bitmap = FPDFBitmap_CreateEx(pInfo->Width, pInfo->Height, (int)pInfo->PixelFormat, (void*)pInfo->Data, pInfo->Stride);
+  FPDF_BITMAP bitmap = FPDFBitmap_CreateEx2(pInfo->Width, pInfo->Height, (FPDFPixel)pInfo->PixelFormat, (void*)pInfo->Data, pInfo->Stride);
   FPDFImageObj_SetBitmap(&pdfPage, 1, imageObject, bitmap);
 
   FPDFPageObj_Transform(imageObject, pMatrix->a, pMatrix->b, pMatrix->c, pMatrix->d, pMatrix->e, pMatrix->f);
