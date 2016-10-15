@@ -36,6 +36,18 @@ typedef struct _FPDF_PAGEOBJECTINFO
   FPDF_PAGEOBJECTINFO;
 
 
+typedef struct _FPDF_MATRIX
+{
+  double a;
+  double b;
+  double c;
+  double d;
+  double e;
+  double f;
+}
+  FPDF_MATRIX;
+
+
 typedef struct _FPDF_IMAGEINFO
 {
   int Height;
@@ -45,6 +57,8 @@ typedef struct _FPDF_IMAGEINFO
   int Filter;
   long DataSize;
   const unsigned char *pData;
+
+  FPDF_MATRIX Matrix;
 }
   FPDF_IMAGEINFO;
 

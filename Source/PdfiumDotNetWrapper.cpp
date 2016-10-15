@@ -185,6 +185,12 @@ bool Pdfium::GetImageFromPageObject(IntPtr pageObject, PdfImageInfo *pInfo)
     pInfo->Filter = (DecoderEnum)imageInfo.Filter;
     pInfo->DataSize = imageInfo.DataSize;
     pInfo->pData = imageInfo.pData;
+    pInfo->Matrix.a = imageInfo.Matrix.a;
+    pInfo->Matrix.b = imageInfo.Matrix.b;
+    pInfo->Matrix.c = imageInfo.Matrix.c;
+    pInfo->Matrix.d = imageInfo.Matrix.d;
+    pInfo->Matrix.e = imageInfo.Matrix.e;
+    pInfo->Matrix.f = imageInfo.Matrix.f;
     result = true;
   }
 

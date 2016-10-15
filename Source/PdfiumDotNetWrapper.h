@@ -67,6 +67,17 @@ namespace PdfiumDotNetWrapper
   };
 
 
+  public value struct TransformationMatrix  // width, 0, 0, height, x-shift, y-shift
+  {
+    double a;
+    double b;
+    double c;
+    double d;
+    double e;
+    double f;
+  };
+
+
   public value struct PdfImageInfo
   {
     int Height;
@@ -76,6 +87,7 @@ namespace PdfiumDotNetWrapper
     DecoderEnum Filter;
     long DataSize;
     const unsigned char *pData;
+    TransformationMatrix Matrix;
   };
 
 
@@ -95,17 +107,6 @@ namespace PdfiumDotNetWrapper
     PixelFormatEnum PixelFormat;
     IntPtr Data;
     int Stride;
-  };
-
-
-  public value struct TransformationMatrix  // width, 0, 0, height, x-shift, y-shift
-  {
-    double a;
-    double b;
-    double c;
-    double d;
-    double e;
-    double f;
   };
 
 

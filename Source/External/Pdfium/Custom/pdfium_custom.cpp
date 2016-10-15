@@ -117,6 +117,13 @@ DLLEXPORT bool STDCALL FPDFPageObject_GetImageInfo(FPDF_PAGEOBJECT page_obj, FPD
       pInfo->Filter = 0;
     }
 
+    pInfo->Matrix.a = pImageObj->m_Matrix.a;
+    pInfo->Matrix.b = pImageObj->m_Matrix.b;
+    pInfo->Matrix.c = pImageObj->m_Matrix.c;
+    pInfo->Matrix.d = pImageObj->m_Matrix.d;
+    pInfo->Matrix.e = pImageObj->m_Matrix.e;
+    pInfo->Matrix.f = pImageObj->m_Matrix.f;
+
     result = true;
   }
 
